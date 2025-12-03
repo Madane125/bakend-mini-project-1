@@ -9,25 +9,25 @@ app.get("/", (req, res) => {
 
 //Create operation
 
-// app.get(`/create`, async (req, res) => {
-//   let createduser = await userModel.create({
-//     name: "Madane Sunil",
-//     email: "madanesunil@gmail.com",
-//     username: "MadaneS",
-//   });
-//   res.send(createduser);
-// });
+ app.get(`/create`, async (req, res) => {
+  let createduser = await userModel.create({
+    name: "Madane Sunil",
+    email: "madanesunil@gmail.com",
+    username: "MadaneS",
+  });
+  res.send(createduser);
+});
 
 //Update operation
 
-// app.get(`/update`, async (req, res) => {
-//   let updateduser = await userModel.findOneAndUpdate(
-//     { username: "MadaneS" },
-//     { name: "Madane125" },
-//     { new: true }
-//   );
-//   res.send(updateduser);
-// });
+app.get(`/update`, async (req, res) => {
+  let updateduser = await userModel.findOneAndUpdate(
+    { username: "MadaneS" },
+    { name: "Madane125" },
+    { new: true }
+  );
+  res.send(updateduser);
+});
 
 //Read operation
 
